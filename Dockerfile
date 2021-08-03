@@ -22,7 +22,7 @@ RUN cd nv-codec-headers && sudo make install && cd –
 RUN git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg/
 RUN ./configure --enable-nonfree --enable-cuda-nvcc –enable-libnpp --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64
 RUN make -j 8
-sudo make install
+RUN sudo make install
 
 RUN apt-get clean
 RUN apt-get remove --purge -y $BUILD_PACKAGES $(apt-mark showauto) 
