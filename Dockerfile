@@ -5,7 +5,7 @@ FROM ubuntu:20.04
 MAINTAINER nickp27
 
 WORKDIR /
-
+ENV DEBIAN_FRONTEND=noninteractive
 ENV BUILD_PACKAGES curl kmod build-essential yasm cmake libtool libc6 libc6-dev unzip wget libnuma1 libnuma-dev
 ENV DRIVER_ARCHIVE=NVIDIA-Linux-x86_64-460.56
 ENV SITE=download.nvidia.com/XFree86/Linux-x86_64
